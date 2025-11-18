@@ -1,0 +1,173 @@
+/* Yleinen tyyli */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #000000;
+  color: #00ff66;
+  font-family: "Courier New", Courier, monospace;
+  text-shadow: 0 0 4px #00ff66;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Kevyt "scanline"-overlay */
+.scanline {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 255, 102, 0.05) 51%
+  );
+  background-size: 100% 2px;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+/* Layout */
+.wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #00ff66;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.logo-block {
+  margin-right: 16px;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border: 1px solid #00ff66;
+  padding: 6px;
+}
+
+.title-block h1 {
+  font-size: 2.2rem;
+  letter-spacing: 0.15em;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  margin-top: 4px;
+  color: #66ffb2;
+}
+
+/* Kortit / lohkot */
+.card {
+  border: 1px solid #00ff66;
+  padding: 16px 16px 14px;
+  margin-bottom: 16px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #99ffcc;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #a0ffea;
+}
+
+/* Keikkalista */
+.gigs {
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.gigs li {
+  margin-bottom: 6px;
+}
+
+/* Kuva */
+.image-card {
+  text-align: center;
+}
+
+.dj-photo {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small-note {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: #66ffb2;
+}
+
+/* Linkit */
+a {
+  color: #00ff66;
+  text-decoration: none;
+  border-bottom: 1px dotted #00ff66;
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 32px;
+  border-top: 1px solid #00ff66;
+  padding-top: 8px;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #66ffb2;
+}
+
+/* Pienet näytöt */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-block {
+    margin-bottom: 8px;
+  }
+
+  .title-block h1 {
+    font-size: 1.8rem;
+  }
+}
