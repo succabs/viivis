@@ -129,6 +129,10 @@ h6 {
   margin-right: auto;
 }
 
+.logo-image {
+  max-width: 60%;
+}
+
 .small-note {
   font-size: 0.8rem;
   margin-top: 8px;
@@ -158,6 +162,11 @@ a:hover {
 
 /* Pienet näytöt */
 @media (max-width: 600px) {
+  /* Layout */
+  .wrapper {
+    max-width: 100%;
+  }
+
   .site-header {
     flex-direction: column;
     align-items: flex-start;
